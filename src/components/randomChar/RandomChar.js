@@ -22,6 +22,8 @@ class RandomChar extends Component {
     marvelService = new MarvelService();
 
     componentDidMount() {
+        // this.foo.bar = 0; //error
+
         this.updateChar();
         this.timerId = setInterval(this.updateChar, 50000);
     }

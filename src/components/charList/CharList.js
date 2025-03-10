@@ -35,6 +35,8 @@ class CharList extends Component {
     }
 
     updateAllChars = () => {
+        // this.foo.bar = 0;
+
         this.marvelService
             .getAllCharacters()
             .then(this.onCharListLoaded)
