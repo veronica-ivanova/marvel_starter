@@ -12,7 +12,7 @@ const CharList = (props) => {
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(false);
 	const [newItemLoading, setNewItemLoading] = useState(false);
-	const [offset, setOffset] = useState(210);
+	const [offset, setOffset] = useState(0);
 	const [charEnded, setCharEnded] = useState(false);
 
 
@@ -90,7 +90,7 @@ const CharList = (props) => {
 						alt={item.name}
 						style={imgStyle}
 					/>
-					<div className="char__name">${item.name}</div>
+					<div className="char__name">{item.name}</div>
 				</li>
 			);
 		});
