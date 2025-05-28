@@ -17,7 +17,7 @@ const RandomChar = () => {
     const timerId = setInterval(updateChar, 50000);
 
     return () => {
-      clearInterval(this.timerId);
+      clearInterval(timerId);
     };
   }, []);
 
