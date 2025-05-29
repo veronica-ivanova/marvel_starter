@@ -1,7 +1,7 @@
 import './comicsList.scss';
-import uw from '../../resources/img/UW.png';
-import xMen from '../../resources/img/x-men.png';
+
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 import useMarvelService from "../../services/MarvelService";
 import ErrorMessage from "../errorMessage/ErrorMessage";
 import Spinner from "../spinner/Spinner";
@@ -12,7 +12,6 @@ const ComicsList = () => {
 	const [newItemLoading, setNewItemLoading] = useState(false);
 	const [offset, setOffset] = useState(0);
 	const [comicsEnded, setComicsEnded] = useState(false);
-
 
 	const {loading, error, getAllComics} = useMarvelService();
 
@@ -43,11 +42,11 @@ const ComicsList = () => {
             return(
                 <li className="comics__item" key={item.id}>
                     
-                    <a href="#">
+                    <Link to={`/comics/${item.id}`}>
                         <img src={item.thumbnail} alt={item.title} className="comics__item-img"/>
                         <div className="comics__item-name">{item.title}</div>
                         <div className="comics__item-price">{item.prices}</div>
-                    </a>
+                    </Link>
                 </li>
             )
         })
@@ -55,10 +54,8 @@ const ComicsList = () => {
     }
 
     const items = renderItems(comicsList);
-
     const errorMessage = error ? <ErrorMessage /> : null;
 	const spinner = loading && !newItemLoading ? <Spinner /> : null;
-
 
     return (
         <div className="comics__list">

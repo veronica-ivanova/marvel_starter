@@ -28,8 +28,8 @@ const RandomChar = () => {
   const updateChar = () => {
     clearError();
     // const id = Math.floor(Math.random() * (1011400 - 1011000) + 1011000);
-    const id = Math.floor(Math.random() * (20 - 1) + 1); //альтернативный marvel api 20 персонажей
-
+    // const id = Math.floor(Math.random() * (20 - 1) + 1); //альтернативный marvel api 20 персонажей
+      const id = Math.floor(Math.random() * (200 - 100) + 1); 
     getCharacter(id)
       .then(onCharLoaded);
   };

@@ -6,7 +6,6 @@ const ComicsPage = () => {
     <>
         <AppBanner/>
         <ComicsList/>
-      
     </>
   );
 };

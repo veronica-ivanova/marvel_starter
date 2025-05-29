@@ -19,7 +19,6 @@ const CharInfo = (props) => {
         updateChar()
     }, [props.charId])
 
-
     const updateChar = () => {
         const {charId} = props;
         if (!charId) {
