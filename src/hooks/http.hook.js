@@ -18,10 +18,10 @@ export const useHttp = () => {
             const data = await response.json();
             setLoading(false);
             
-            const results = data?.data?.results;
-                if (!results || results.length === 0) {
-                    throw new Error(`No results found for ${url}`);
-            }
+            // const results = data?.data?.results;
+            //     if (!results || results.length === 0) {
+            //         throw new Error(`No results found for ${url}`);
+            // }
             return data;
 
         } catch(e) {
