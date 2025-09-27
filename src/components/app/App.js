@@ -13,7 +13,7 @@ const SingleCharacterLayout =lazy(() => import("../pages/singleCharacterLayout/S
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/marvel_starter">
       <div className="app">
         <AppHeader />
         <main>
